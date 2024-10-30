@@ -119,6 +119,37 @@ public class Main {
     }
 }
 ```
+### Penjelasan
+Class `Pegawai`<br>
+Class ini adalah superclass yang memiliki dua atribut utama:
+1. **nama**: menyimpan nama pegawai.
+2. **gajiPokok**: menyimpan gaji pokok pegawai.
+Class ini juga memiliki:
+- **Setter dan Getter** untuk masing-masing atribut (`nama` dan `gajiPokok`) untuk mengakses dan memodifikasi nilai dari atribut private ini.
+- **Metode `cetakInfo()`** yang digunakan untuk mencetak informasi dasar pegawai, yaitu nama dan gaji pokok.
+
+Class `Manager`<br>
+`Manager` adalah subclass dari `Pegawai`, yang artinya `Manager` mewarisi atribut dan metode dari class `Pegawai`. `Manager` memiliki tambahan atribut:
+**tunjangan**: untuk menyimpan tunjangan seorang manager.
+Class ini juga memiliki:
+- **Setter dan Getter** untuk `tunjangan`, sehingga atribut ini dapat diakses dan dimodifikasi.
+- **Metode `cetakInfo()`** yang di-override dari superclass (`Pegawai`). Metode ini pertama-tama memanggil `cetakInfo()` dari superclass (menggunakan `super.cetakInfo()`), lalu menambahkan pencetakan tunjangan di bagian bawahnya.
+- **Metode tambahan `cetakTunjangan()`** yang hanya mencetak nilai tunjangan.
+
+Class `Programmer`<br>
+`Programmer` adalah subclass dari `Pegawai` yang juga mewarisi atribut dan metode dari class `Pegawai`. `Programmer` memiliki tambahan atribut:
+**bonus**: untuk menyimpan bonus seorang programmer.
+Class ini juga memiliki:
+- **Setter dan Getter** untuk `bonus`.
+- **Metode `cetakInfo()`** yang di-override dari superclass (`Pegawai`). Metode ini memanggil `super.cetakInfo()` untuk mencetak informasi dasar pegawai, lalu menambahkan pencetakan bonus.
+- **Metode tambahan `cetakBonus()`** yang hanya mencetak nilai bonus.
+
+Class `Main`<br>
+Class `Main` berisi metode `main()` yang menjadi titik awal eksekusi program:
+1. Membuat objek `Manager` dan `Programmer`.
+2. Menggunakan **setter** untuk mengisi nama, gaji pokok, tunjangan (untuk `Manager`), dan bonus (untuk `Programmer`).
+3. Memanggil metode `cetakInfo()` dan `cetakTunjangan()` untuk `Manager`.
+4. Memanggil metode `cetakInfo()` dan `cetakBonus()` untuk `Programmer`.
 
 ### Tampilan Output
 ![1](ss/1.png)
