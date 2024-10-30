@@ -11,6 +11,7 @@
 ### Latihan
 - Lengkapi latihan class Mahasiswa dengan setter dan getter.
 - Implementasikan java code diagram class berikut:
+![2](ss/2.png)
 
 Pegawai
 ``` javascript
